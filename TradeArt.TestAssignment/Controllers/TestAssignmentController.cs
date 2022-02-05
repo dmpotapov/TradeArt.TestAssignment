@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Threading.Tasks;
 using TradeArt.Lib.GraphQL;
@@ -14,6 +15,7 @@ namespace TradeArt.TestAssignment.Controllers
         private readonly IDataGetter _dataGenerator;
         private readonly IHashGetter _hashGetter;
         private readonly IGraphQLService _graphQLService;
+        private readonly ILogger<TestAssignmentController> _logger;
 
         public TestAssignmentController(
             IDataGetter dataGenerator,
