@@ -7,6 +7,7 @@ using Microsoft.OpenApi.Models;
 using System;
 using System.IO;
 using System.Reflection;
+using System.Threading.Tasks;
 using TradeArt.Lib.GraphQL;
 using TradeArt.Lib.Services;
 
@@ -50,11 +51,10 @@ namespace TradeArt.TestAssignment
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "TradeArt.TestAssignment v1"));
             }
 
-            app.UseHttpsRedirection();
+            app.UseSwagger();
+            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "TradeArt.TestAssignment v1"));
 
             app.UseRouting();
 
@@ -63,6 +63,7 @@ namespace TradeArt.TestAssignment
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.Map("/", context => Task.Run(() => context.Response.Redirect("/swagger")));
             });
         }
     }

@@ -3,13 +3,11 @@
 FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS base
 WORKDIR /app
 EXPOSE 80
-EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
-COPY ["TradeArt.TestAssignment/TradeArt.TestAssignment.csproj", "TradeArt.TestAssignment/"]
-RUN dotnet restore "TradeArt.TestAssignment/TradeArt.TestAssignment.csproj"
 COPY . .
+RUN dotnet restore "TradeArt.TestAssignment/TradeArt.TestAssignment.csproj"
 WORKDIR "/src/TradeArt.TestAssignment"
 RUN dotnet build "TradeArt.TestAssignment.csproj" -c Release -o /app/build
 
