@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31410.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TradeArt.TestAssignment", "TradeArt.TestAssignment\TradeArt.TestAssignment.csproj", "{061D5F4B-95F4-4995-9BEB-F084D3B78BB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TradeArt.Lib", "TradeArt.Lib\TradeArt.Lib.csproj", "{84548368-14FD-4A8A-8247-B5E482FC3B26}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{061D5F4B-95F4-4995-9BEB-F084D3B78BB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{061D5F4B-95F4-4995-9BEB-F084D3B78BB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{061D5F4B-95F4-4995-9BEB-F084D3B78BB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{061D5F4B-95F4-4995-9BEB-F084D3B78BB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84548368-14FD-4A8A-8247-B5E482FC3B26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84548368-14FD-4A8A-8247-B5E482FC3B26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84548368-14FD-4A8A-8247-B5E482FC3B26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84548368-14FD-4A8A-8247-B5E482FC3B26}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {376F8B5F-FC08-4DF5-8E0C-88B045EC8E19}
+	EndGlobalSection
+EndGlobal
