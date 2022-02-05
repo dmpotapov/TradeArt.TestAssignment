@@ -28,10 +28,10 @@ namespace TradeArt.Lib.Tests.Services
         }
 
         [Test]
-        public void Should_Throw_ArgumentNullException_On_Empty_String()
+        public void Should_Throw_ArgumentException_On_Empty_String()
         {
             // Arrange, Act, Assert
-            Assert.Throws<ArgumentNullException>(() => _stringInvertor.Invert(null));
+            Assert.Throws<ArgumentException>(() => _stringInvertor.Invert(string.Empty));
         }
     }
 }

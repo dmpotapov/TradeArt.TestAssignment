@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,6 +10,8 @@ namespace TradeArt.Lib.Services
     {
         public async Task<string> GetByFileAsync(string path)
         {
+            if (string.IsNullOrEmpty(path)) throw new ArgumentException(nameof(path));
+
             using var hashAlgorithm = SHA512.Create();
             using var stream = new FileStream(path, FileMode.Open);
 

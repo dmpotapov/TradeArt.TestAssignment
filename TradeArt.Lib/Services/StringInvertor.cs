@@ -11,7 +11,7 @@ namespace TradeArt.Lib.Services
         /// <returns>Inverted string</returns>
         public string Invert(string source)
         {
-            if (string.IsNullOrEmpty(source)) throw new ArgumentNullException(nameof(source));
+            if (string.IsNullOrEmpty(source)) throw new ArgumentException(nameof(source));
 
             var arr = source.ToCharArray();
             Array.Reverse(arr);
